@@ -8,7 +8,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 //компонента - функция которая возвращает разметку
 const App = () =>
-  <Router>
+  <Router basename='React-App'>
     <div className="app-wrapper">
       <Header />
       <Nav />
