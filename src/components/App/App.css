@@ -1,0 +1,18 @@
+.app-wrapper {
+    display: grid;
+
+    grid-template-areas:
+        "gheader gheader"
+        "gnav gcontent";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.app-wrapper-content
+{
+    grid-area: gcontent;
+    background-color: cornflowerblue;
+}

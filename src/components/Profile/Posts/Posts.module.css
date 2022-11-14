@@ -1,0 +1,37 @@
+/*Posts*/
+
+.title {
+    grid-area: postsTitle;
+    background-color: blue;
+}
+
+.inputField {
+    grid-area: postsInputField;
+    background-color: blue;
+}
+
+.button {
+    grid-area: postsButton;
+    background-color: blue;
+}
+
+.posts {
+    grid-area: contentPosts;
+    background-color: brown;
+    display: grid;
+    grid-template-areas:
+        "postsTitle"
+        "postsInputField"
+        "postsButton"
+        "postsMessages";
+    grid-auto-rows: 2fr 2fr 1fr 10fr;
+    grid-gap: 10px;
+}
+
+.messages {
+    display: inline;
+    grid-area: postsMessages;
+    background-color: blue;
+}
+
+/*Posts*/

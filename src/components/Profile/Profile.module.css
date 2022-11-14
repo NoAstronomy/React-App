@@ -1,0 +1,149 @@
+.mainProfile {
+    /* grid-area: gcontent;
+    background-color: aquamarine; */
+
+    display: grid;
+    grid-template-areas:
+        "contentImg"
+        "contentProfile"
+        "contentPosts";
+    grid-template-rows: 100px 300px 1fr;
+    grid-gap: 10px;
+}
+
+.img {
+    grid-area: contentImg;
+    background-color: brown;
+    overflow: hidden;
+}
+
+.img img {
+    width: 100%;
+}
+
+
+/*Profile*/
+.info {
+    grid-area: profileInfo;
+    background-color: indianred;
+    display: grid;
+    grid-template-areas:
+        "infoName"
+        "infoDateOfBirth"
+        "infoCity"
+        "infoEducation"
+        "infoWebSite";
+    grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+    grid-gap: 10px;
+}
+
+.info .name {
+    grid-area: infoName;
+    background-color: azure;
+}
+
+.info .dateOfBirth {
+    grid-area: infoDateOfBirth;
+    background-color: azure;
+}
+
+.info .city {
+    grid-area: infoCity;
+    background-color: azure;
+}
+
+.info .education {
+    grid-area: infoEducation;
+    background-color: azure;
+}
+
+.info .webSite {
+    grid-area: infoWebSite;
+    background-color: azure;
+}
+
+
+.profile .avatar {
+    grid-area: profileAvatar;
+    background-color: indianred;
+}
+
+.profile .avatar img {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100px;
+}
+
+.profile {
+    display: grid;
+    grid-area: contentProfile;
+    background-color: brown;
+    grid-template-areas:
+        "profileAvatar profileInfo";
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}
+
+/*Profile*/
+
+
+/*Posts*/
+
+.posts .title {
+    grid-area: postsTitle;
+    background-color: blue;
+}
+
+.posts .inputField {
+    grid-area: postsInputField;
+    background-color: blue;
+}
+
+.posts .button {
+    grid-area: postsButton;
+    background-color: blue;
+}
+
+.posts .messages {
+    display: grid;
+    grid-area: postsMessages;
+    background-color: blue;
+}
+
+.posts {
+    grid-area: contentPosts;
+    background-color: brown;
+    display: grid;
+    grid-template-areas:
+        "postsTitle"
+        "postsInputField"
+        "postsButton"
+        "postsMessages";
+    grid-auto-rows: 2fr 2fr 1fr 10fr;
+    grid-gap: 10px;
+}
+
+.post .message{
+    display: grid;
+    grid-area: postMessage;
+    grid-template-areas:
+        "postMessageAvatar postMessageText";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+    background-color:cadetblue;
+}
+
+.messageImage img{
+    width: 30px;
+}
+.messageImage{
+    grid-area: postMessageAvatar;
+}
+
+.messageText{
+    grid-area: postMessageText;
+    font-family: 'Courier New', Courier, monospace;
+    color: hotpink;
+}
+/*Posts*/
