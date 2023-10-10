@@ -1,5 +1,5 @@
 .postAvatar img {
-    width: 30px;
+    width: 60px;
 }
 
 .postAvatar {
@@ -10,15 +10,27 @@
     grid-area: postText;
     font-family: 'Courier New', Courier, monospace;
     color: white;
+    padding-top: 45px;
+    font-size: large;
 }
 
 .post {
     display: grid;
     grid-area: postMessage;
-    grid-template-areas:
-        "postAvatar postText";
-    grid-template-columns: 1fr 10fr;
-    grid-gap: 10px;
-    height: 50px;
+    grid-template-areas: 
+        "postAvatar postText"
+        "postLike postLike";
+
+    grid-template-columns: 1fr 19fr;
+    grid-template-rows: 1fr 6fr;
+    height: 100px;
     background-color: cadetblue;
+    border: solid;
+    margin: 1px;
+}
+
+.postLike{
+    display: grid;
+    grid-area: postLike;
+    color: white;
 }

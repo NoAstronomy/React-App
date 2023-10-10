@@ -4,6 +4,7 @@ import PostModule from './Post.module.css'
 const Post = (props) => <div className={PostModule.post}>
     <PostAvatar />
     <PostText text={props.text}/>
+    <PostLike likes={props.likes}/>
 </div>
 
 const PostAvatar = () => <div className={PostModule.postAvatar}>
@@ -13,5 +14,7 @@ const PostAvatar = () => <div className={PostModule.postAvatar}>
 const PostText = (props) => <div className={PostModule.postText}>
     {props.text}
 </div>
+
+const PostLike = (props) => <div className={PostModule.postLike}>Likes: {props.likes}</div>
 
 export default Post;

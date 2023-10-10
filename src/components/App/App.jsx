@@ -7,19 +7,26 @@ import './App.css';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 //компонента - функция которая возвращает разметку
-const App = () =>
-  <Router>
+const App = (props) => {
+  debugger;
+  return(
+    <Router>
     <div className="app-wrapper">
       <Header />
       <Nav />
       <div className='app-wrapper-content'>
         <Routes>
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/messages' element={<Dialogs />} />
+          <Route path='/profile' element={<Profile
+            dispatch={props.dispatch}
+            profile={props.state.profile} />} />
+          <Route path='/messages' element={<Dialogs store={props.store}/>} />
         </Routes>
       </div>
     </div>
   </Router>
+  )
+}
+
 
 
 export default App;

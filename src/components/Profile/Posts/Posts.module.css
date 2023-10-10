@@ -8,6 +8,7 @@
 .inputField {
     grid-area: postsInputField;
     background-color: blue;
+    size: 100px;
 }
 
 .button {
@@ -20,18 +21,20 @@
     background-color: brown;
     display: grid;
     grid-template-areas:
-        "postsTitle"
-        "postsInputField"
-        "postsButton"
-        "postsMessages";
-    grid-auto-rows: 2fr 2fr 1fr 10fr;
-    grid-gap: 10px;
+        "postsTitle postsTitle"
+        "postsInputField postsButton"
+        "postsMessages postsMessages";
+    /* grid-auto-rows: 2fr 2fr 1fr 10fr; */
+    grid-template-columns: 1fr 7.8fr;
+    grid-template-rows: 1fr 1fr 10fr;
+    border: solid;
 }
 
 .messages {
     display: inline;
     grid-area: postsMessages;
     background-color: blue;
+    padding-top: 10px;
 }
 
 /*Posts*/

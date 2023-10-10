@@ -1,3 +1,27 @@
-.dialogs{
-    background-color: aqua;
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    /* grid-template-areas: "dialogItems messages"; */
+}
+
+.dialog {
+    display: grid;
+}
+
+.dialogItems {
+    display: grid;
+    padding: 10px;
+}
+
+.messages {
+    display: grid;
+    padding: 10px;
+}
+
+.message {
+    display: grid;
+}
+
+.dialogItems .active {
+    color: gold;
 }

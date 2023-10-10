@@ -2,11 +2,19 @@ import React from "react";
 import ProfileModule from './Profile.module.css';
 import Posts from './Posts/Posts'
 
-const MainProfile = () => <div className={ProfileModule.mainProfile}>
-    <Img />
-    <Profile />
-    <Posts />
-</div>
+const MainProfile = (props) => {
+    debugger;
+    return (
+        <div className={ProfileModule.mainProfile}>
+            <Img />
+            <Profile />
+            <Posts
+                dispatch={props.dispatch}
+                inputFieldMessage={props.profile.inputFieldMessage}
+                posts={props.profile.posts} />
+        </div>
+    )
+}
 
 const Img = () => <div className={ProfileModule.img}>
     <img src='https://www.hostinger.com.ua/rukovodstva/wp-content/uploads/sites/8/2018/12/kak-sdelat-dizajn-sajta.jpg' />
