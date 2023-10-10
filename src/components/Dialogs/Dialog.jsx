@@ -19,7 +19,7 @@ const Message = (props) => {
     )
 }
 const Dialogs = (props) => {
-
+    debugger;
     let state = props.store.getState().dialogsGroup;
     let dialogsElements = state.dialogs.map(x => <DialogItem route={x.id} name={x.name} />);
     let messagesElements = state.messages.map(x => <Message message={x.name} />);
@@ -46,7 +46,7 @@ const Dialogs = (props) => {
                 <div>
                     <div><textarea
                         onChange={changeTextMessage}
-                        placeholder="Enter your message..."></textarea></div>
+                        placeholder={"Enter your message..."}>{messageText}</textarea></div>
                 </div><button onClick={onSendMessageClick}>Send Message</button></div>
             <div>
             </div>

@@ -40,7 +40,7 @@ const Posts = (props) => {
     let changeTextMessage = () => {
         props.dispatch(updateNewPostTextActionCreator(newPostElement.current.value));
     };
-
+    
     return (
         <div className={PostsModule.posts}>
             <Title />
